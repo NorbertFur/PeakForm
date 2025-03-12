@@ -55,7 +55,7 @@ const Generator = (props) => {
   }
 
 	return (
-		<SectionWrapper
+		<SectionWrapper id={'generate'}
 			header={'generate your workout'}
 			title={["It's", 'Huge', "o'clock"]}>
 			<Header
