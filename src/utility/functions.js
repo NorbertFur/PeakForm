@@ -1,7 +1,8 @@
-import { EXERCISES, SCHEMES, TEMPOS, WORKOUTS } from "./exercises";
+import { EXERCISES, SCHEMES, TEMPOS, WORKOUTS } from "./exercises"
+const exercises = exercisesFlattener(EXERCISES)
 
-export const generateWorkout = (args) =>{
-    const {poison, muscles, goal} = args
+export function generateWorkout(args) {
+    const { muscles, poison: workout, goal } = args
     let exer = Object.keys(exercises);
     exer = exer.filter((key) => exercises[key].meta.environment !== "home");
     let includedTracker = [];

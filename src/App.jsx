@@ -15,6 +15,7 @@ const App = () => {
       return
     }
     let newWorkout = generateWorkout({poison, muscles, goal})
+    console.log(newWorkout);
     setWorkout(newWorkout)
   }
 
@@ -30,7 +31,7 @@ const App = () => {
       setGoal={setGoal}
       updateWorkout={updateWorkout}
       />
-			{workout && <Workout workout={workout} />}
+			{workout && (<Workout workout={workout} />)}
 		</main>
 	);
 };
